@@ -21,7 +21,13 @@ $ajax102 = file_get_contents('https://www.peppercloud.nl/res/other/motd.txt', FI
 // Notification Settings
 $useMail = false;
 $usePush = false;
+$useTelegram = false;
 
+// Telegram settings
+$telegramBot = '';
+$telegramDestination = '';
+
+// Email settings
 $mail_username = "username";
 $mail_password = "password";
 $mail_host = "mail.example.com";

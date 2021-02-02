@@ -14,6 +14,10 @@
                 $getdata->useMail = $useMail;
                 $getdata->usePush = $usePush;
                 $getdata->testMail = $testMail;
+                $getdata->useTelegram = $useTelegram;
+
+                $getdata->telegramBot = $telegramBot;
+                $getdata->telegramDestination = $telegramDestination;
 
                 $getdata->mail_username = $mail_username;
                 $getdata->mail_password = $mail_password;
