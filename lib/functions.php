@@ -183,7 +183,9 @@ class getData {
 			$this->sendPush($nmessage);
 		}
 		if ($this->useTelegram == true && $trigger == true) {
-			$this->sendTelegram($nmessage);
+			include_once("telegram.php");
+			$res = sendTelegram($nmessage);
+			echo $res;
 		}
 	}
 
@@ -244,21 +246,6 @@ class getData {
 		} catch (Exception $e) {
 			echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 		}
-	}
-
-	private function sendTelegram($nmessage) {
-		$url = 'https://api.telegram.org/bot' . $this->telegramBot . '/sendMessage';
-		$data = array('chat_id' => $this->telegramDestination, 'text' => $nmessage);
-		$options = array(
-			'http' => array(
-				'method' => 'POST',
-				'header' => "Content-Type:application/x-www-form-urlencoded\r\n",
-				'content' => http_build_query($data),
-			),
-		);
-		$context = stream_context_create($options);
-		$result = file_get_contents($url, false, $context);
-		echo $result;
 	}
 }
 

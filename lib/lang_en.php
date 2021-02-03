@@ -58,6 +58,7 @@ function lang($phrase){
         'MENU_ADMIN_ADD' => 'Add server',
         'MENU_ADMIN_PUSH' => 'Pushbullet',
         'MENU_ADMIN_UPDATE' => 'Update data',
+        'MENU_ADMIN_TELEGRAM' => 'Test Telegram',
         'MENU_LOGIN' => 'Login',
         'MENU_LOGOUT' => 'Logout',
         'MENU_LOGIN_MYACCOUNT' => 'My account',
