@@ -183,8 +183,8 @@ class getData {
 			$this->sendPush($nmessage);
 		}
 		if ($this->useTelegram == true && $trigger == true) {
-			include_once("telegram.php");
-			$res = sendTelegram($nmessage);
+			include_once("lib/telegram.php");
+			$res = sendTelegram($this->telegramBot, $this->telegramDestination, $nmessage);
 			echo $res;
 		}
 	}

@@ -1,10 +1,8 @@
 <?php
 
-function sendTelegram($message) {
-    include_once("config.php");
-
-    $url = 'https://api.telegram.org/bot' . $telegramBot . '/sendMessage';
-    $data = array('chat_id' => $telegramDestination, 'text' => $message);
+function sendTelegram($source, $destination,$message) {
+    $url = 'https://api.telegram.org/bot' . $source . '/sendMessage';
+    $data = array('chat_id' => $destination, 'text' => $message);
     $options = array(
         'http' => array(
             'method' => 'POST',
